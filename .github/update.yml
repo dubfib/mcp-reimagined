@@ -1,0 +1,27 @@
+name: Update Versions
+
+on:
+  push:
+    branches: [ main ]
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+
+      - run: bun install
+      - run: bun run index.ts
+
+      - run: |-
+          git add .
+          git diff
+          git config --global user.email "github-action-bot@example.com"
+          git config --global user.name "GitHub Action Bot"
+          git commit -m "chore: updated verisons" -a || echo "No changes"
+          git push
+        name: Commit and Push to Repository

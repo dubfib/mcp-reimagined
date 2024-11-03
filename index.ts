@@ -188,8 +188,8 @@ idea.project.settings {
         .replace('JAVA_VERSION', JAVA_VERSION)
         .replace('MINECRAFT_VERSION', `'${MC_VERSION}'`)
         .replace('MCP_VERSION', `'${MCP_VERSION}'`)
-        .replace('MAPPING_CHANNEL', `'${MAPPING_CHANNEL}'`)
-        .replace('MAPPING_VERSION', `'${MAPPING_VERSION}'`)
+        .replace('MAPPINGS_CHANNEL', `'${MAPPING_CHANNEL}'`)
+        .replace('MAPPINGS_VERSION', `'${MAPPING_VERSION}'`)
         .replace('SPI_VERSION', `'${SPI_VERSION}'`)
 
     await fs.promises.writeFile('./build.gradle', build_gradle_fixed);

@@ -1,4 +1,4 @@
-name: Update Versions
+name: Update Version
 
 on:
   push:
@@ -21,6 +21,6 @@ jobs:
           git diff
           git config --global user.email "github-action-bot@example.com"
           git config --global user.name "GitHub Action Bot"
-          git commit -m "chore: updated verisons" -a || echo "No changes"
+          git commit -m "chore: updated version" -a || echo "No update available"
           git push
         name: Commit and Push to Repository

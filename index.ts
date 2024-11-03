@@ -179,7 +179,7 @@ idea.project.settings {
 
     // @ts-ignore
     // i will probably fix this later
-    const { JAVA_VERSION, MC_VERSION, MCP_VERSION, MAPPING_CHANNEL, MAPPING_VERSION } = await gradleProperties(conv);
+    const { JAVA_VERSION, MC_VERSION, MCP_VERSION, MAPPING_CHANNEL, MAPPING_VERSION } = await gradleProperties(version);
 
     await gradleWrapper(version, './gradle/wrapper');
 

@@ -6,7 +6,7 @@
 
 > [!WARNING]
 > This repository **requires Java** version **JAVA_VERSION** or higher.  
-> Press **Ctrl + Shift + Alt + S** to change your **Java version in IntelliJ**.
+> Press **Ctrl + Shift + Alt + S** to change your **Java version** in **IntelliJ**.
 
 > [!NOTE]
 > The **current Minecraft version** in this **repository** is **MINECRAFT_VERSION** `MCP_VERSION`.
@@ -25,7 +25,7 @@ $ git clone https://github.com/dubfib/mcp-reimagined.git
 > [!TIP]
 > You can **optionally delete** the **.github** and **scripts folder** as it is **used for automation in the repository**.
 
-### Select **build.gradle** and click the run button at the top right corner of **IntelliJ IDEA**
+### Select **build.gradle** and click the run button at the top right corner
 > [!TIP]
 > You can **edit how much ram** **Gradle** can use in **gradle.properties** to **speed up the process**.
 > ```bash
@@ -37,13 +37,13 @@ $ git clone https://github.com/dubfib/mcp-reimagined.git
 > org.gradle.configureondemand=true
 > ```
 
-### Click the **Gradle** icon on the right sidebar.
+### Click the Gradle icon on the right sidebar.
 > [!IMPORTANT]
-> **Run Tasks/mcp/setup** and then after **Tasks/mcp/copyAssets**.
+> **Run Tasks/mcp/setup**, then **Tasks/mcp/copyAssets**.
 
 ### Run Minecraft client
 > [!NOTE]
-> **Click** the **dropdown next to the run button**, then **select Minecraft**, **then click run** or run **Tasks/mcp/runClient**.
+> **Click** the **dropdown next to the run button**, **select Minecraft**, and **click run**, or just run **Tasks/mcp/runClient**.
 
 ## Building
 > todo. docs will be added in the future.

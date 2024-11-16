@@ -9,7 +9,7 @@
 
 > [!NOTE]  
 > This **repository automatically updates** **build.gradle** to the **latest version** of **Minecraft**.  
-> The **current available Minecraft version** in this **repository** is **1.21.3** `MCP_VERSION`.
+> The **current available Minecraft version** in this **repository** is **1.21.3** `20241025.112443`.
 
 ## Usage
 > [!IMPORTANT]

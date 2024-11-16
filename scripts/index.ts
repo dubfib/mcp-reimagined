@@ -12,10 +12,10 @@ import gradleProperties from "./src/gradleProperties.ts";
 
     const { JAVA_VERSION, MC_VERSION, MCP_VERSION, MAPPING_CHANNEL, MAPPING_VERSION } = await gradleProperties();
 
-    await gradleWrapper('../gradle/wrapper');
-    await gradleScripts('..');
+    await gradleWrapper('./gradle/wrapper');
+    await gradleScripts('.');
 
-    const build_gradle = (await fs.promises.readFile('./templates/build.gradle')).toString();
+    const build_gradle = (await fs.promises.readFile('./scripts/templates/build.gradle')).toString();
 
     const build_gradle_fixed = build_gradle.toString()
         .replace('FORGE_GRADLE', FORGE_GRADLE.toString())
@@ -30,12 +30,12 @@ import gradleProperties from "./src/gradleProperties.ts";
 
     await fs.promises.writeFile('../build.gradle', build_gradle_fixed);
 
-    const read_me = (await fs.promises.readFile('./templates/README.md')).toString();
+    const read_me = (await fs.promises.readFile('./scripts/templates/README.md')).toString();
 
     const read_me_fixed = read_me.toString()
         .replace('JAVA_VERSION', `${JAVA_VERSION}`)
         .replace('MINECRAFT_VERSION', `${MC_VERSION}`)
-    await fs.promises.writeFile('../README.md', read_me_fixed);
+    await fs.promises.writeFile('./README.md', read_me_fixed);
 
     console.log('finished writing to README.md');
 })();

@@ -29,8 +29,6 @@ $ git clone https://github.com/dubfib/mcp-reimagined.git
 > [!TIP]
 > You can **edit how much ram** **Gradle** can use in **gradle.properties** to **speed up the process**.
 > ```bash
-> # Sets default memory used for gradle commands. Can be overridden by user or command line properties.
-> # This is required to provide enough memory for the Minecraft decompilation process.
 > org.gradle.jvmargs=-Xmx8G # 8GB of ram instead of the default 6GB.
 > org.gradle.daemon=true
 > org.gradle.parallel=true

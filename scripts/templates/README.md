@@ -25,7 +25,7 @@ git clone https://github.com/dubfib/mcp-reimagined.git
 
 ### Unzip or open the project in IntelliJ IDEA
 > [!TIP]
-> You can **optionally delete** the **.github** and **scripts folder** as it is **used for automation in the **repository**.
+> You can **optionally delete** the **.github** and **scripts folder** as it is **used for automation in the repository**.
 
 ### Select **build.gradle** and click the [run button](https://jetbrains.com/help/idea/running-applications.html) at the top right corner of **IntelliJ IDEA**
 > [!TIP]

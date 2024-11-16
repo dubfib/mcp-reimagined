@@ -29,7 +29,7 @@ $ git clone https://github.com/dubfib/mcp-reimagined.git
 > [!TIP]
 > You can **edit how much ram** **Gradle** can use in **gradle.properties** to **speed up the process**.
 > ```bash
-> # 8GB of ram instead of the default 6GB.
+> # 8GB of ram instead of the default 6GB
 > org.gradle.jvmargs=-Xmx8G
 > ```
 

@@ -6,7 +6,7 @@
 
 > [!WARNING]
 > This repository **requires Java** version **21** or higher.  
-> Press **Ctrl + Shift + Alt + S** to quickly change your **Java version in IntelliJ**.
+> Press **Ctrl + Shift + Alt + S** to change your **Java version in IntelliJ**.
 
 > [!NOTE]
 > The **current Minecraft version** in this **repository** is **1.21.3** `20241025.112443`.

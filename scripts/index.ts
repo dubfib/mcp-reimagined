@@ -35,6 +35,7 @@ import gradleProperties from "./src/gradleProperties.ts";
     const read_me_fixed = read_me.toString()
         .replace('JAVA_VERSION', `${JAVA_VERSION}`)
         .replace('MINECRAFT_VERSION', `${MC_VERSION}`)
+        .replace('MCP_VERSION', `${MCP_VERSION}`)
     await fs.promises.writeFile('./README.md', read_me_fixed);
 
     console.log('finished writing to README.md');

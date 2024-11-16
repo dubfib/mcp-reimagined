@@ -11,8 +11,8 @@ import gradleProperties from "./src/gradleProperties.ts";
 
     const { JAVA_VERSION, MC_VERSION, MCP_VERSION, MAPPING_CHANNEL, MAPPING_VERSION } = await gradleProperties();
 
-    await gradleWrapper('../gradle/wrapper');
-    await gradleScripts('..');
+    await gradleWrapper('./gradle/wrapper');
+    await gradleScripts('.');
 
     const build_gradle = (await fs.promises.readFile('./templates/build.gradle')).toString();
 

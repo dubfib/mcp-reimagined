@@ -14,7 +14,7 @@ import gradleProperties from "./src/gradleProperties.ts";
     await gradleWrapper('./gradle/wrapper');
     await gradleScripts('.');
 
-    const build_gradle = (await fs.promises.readFile('./templates/build.gradle')).toString();
+    const build_gradle = (await fs.promises.readFile('./scripts/templates/build.gradle')).toString();
 
     const build_gradle_fixed = build_gradle.toString()
         .replace('FORGE_GRADLE', FORGE_GRADLE.toString())
@@ -25,7 +25,7 @@ import gradleProperties from "./src/gradleProperties.ts";
         .replace('MAPPINGS_VERSION', `'${MAPPING_VERSION}'`)
         .replace('SPI_VERSION', `'${SPI_VERSION}'`)
 
-    await fs.promises.writeFile('../build.gradle', build_gradle_fixed);
+    await fs.promises.writeFile('./build.gradle', build_gradle_fixed);
 
     console.log('finished writing to build.gradle')
 })();

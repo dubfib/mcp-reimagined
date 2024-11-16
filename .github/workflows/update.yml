@@ -13,8 +13,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: oven-sh/setup-bun@v2
-      
-      - run: bun run scripts/index.ts
+
+      - run: cd scripts
+      - run: bun run index.ts
 
       - run: |-
           git add .

@@ -8,7 +8,7 @@
 > This **branch automatically updates** **build.gradle** to the **latest version** of **[Minecraft](https://minecraft.net)**.
 
 > [!WARNING]
-> This branch **requires** Java version **JAVA_VERSION** or higher.
+> This branch **requires [Java](https://oracle.com/java)** version **JAVA_VERSION** or higher.
 
 > [!NOTE]  
 > The **current [Minecraft](https://minecraft.net) verison** in this **branch** is **MINECRAFT_VERSION**.
@@ -23,13 +23,13 @@ git clone https://github.com/dubfib/mcp-reimagined.git
 ```
 *Or **download** from your **browser** **[here](https://codeload.github.com/dubfib/mcp-reimagined/zip/refs/heads/main)**.*
 
-### Unzip or open the project in **[IntelliJ IDEA](https://www.jetbrains.com/idea/download)**
+### Unzip or open the project in IntelliJ IDEA
 > [!TIP]
-> You can **optionally delete** the **[.github](https://github.com/dubfib/mcp-reimagined/tree/main/.github)** and **[scripts folder](https://github.com/dubfib/mcp-reimagined/tree/main/scripts)** as it is **used for automation in the [repository](https://github.com/dubfib/mcp-reimagined)**.
+> You can **optionally delete** the **.github** and **scripts folder** as it is **used for automation in the **repository**.
 
-### Select **[build.gradle](https://github.com/dubfib/mcp-reimagined/blob/main/build.gradle)** and click the [run button](https://jetbrains.com/help/idea/running-applications.html) at the top right corner of **[IntelliJ IDEA](https://www.jetbrains.com/idea/download)**
+### Select **build.gradle** and click the [run button](https://jetbrains.com/help/idea/running-applications.html) at the top right corner of **IntelliJ IDEA**
 > [!TIP]
-> You can **edit how much ram** **[Gradle](https://gradle.org)** can use in **[gradle.properties](https://github.com/dubfib/mcp-reimagined/blob/main/gradle.properties)** to **speed up the process**.
+> You can **edit how much ram** **[Gradle](https://gradle.org)** can use in **gradle.properties** to **speed up the process**.
 > ```bash
 > # Sets default memory used for gradle commands. Can be overridden by user or command line properties.
 > # This is required to provide enough memory for the Minecraft decompilation process.
@@ -43,9 +43,9 @@ git clone https://github.com/dubfib/mcp-reimagined.git
 > [!IMPORTANT]
 > **Run Tasks/mcp/setup** and then after **Tasks/mcp/copyAssets**.
 
-### Run [Minecraft](https://minecraft.net) client
+### Run Minecraft client
 > [!NOTE]
-> **Click** the **[dropdown next to the run button](https://www.jetbrains.com/help/idea/work-with-gradle-tasks.html#config_triggers_gradle)**, then **select Minecraft then click run**. Or your can run **[Tasks/mcp/runClient](https://jetbrains.com/help/idea/work-with-gradle-tasks.html)**.
+> **Click** the **[dropdown next to the run button](https://jetbrains.com/help/idea/work-with-gradle-tasks.html)**, then **select Minecraft then click run**. Or your can run **[Tasks/mcp/runClient](https://jetbrains.com/help/idea/work-with-gradle-tasks.html)**.
 
 ## Building
 > todo. docs will be added in the future.

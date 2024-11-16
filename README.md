@@ -33,7 +33,7 @@ git clone https://github.com/dubfib/mcp-reimagined.git
 > ```bash
 > # Sets default memory used for gradle commands. Can be overridden by user or command line properties.
 > # This is required to provide enough memory for the Minecraft decompilation process.
-> org.gradle.jvmargs=-Xmx4G # 4GB of ram instead of the default 6GB.
+> org.gradle.jvmargs=-Xmx8G # 8GB of ram instead of the default 6GB.
 > org.gradle.daemon=true
 > org.gradle.parallel=true
 > org.gradle.configureondemand=true

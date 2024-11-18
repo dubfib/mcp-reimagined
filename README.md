@@ -25,15 +25,16 @@ $ git clone https://github.com/dubfib/mcp-reimagined.git
 > [!TIP]
 > You can **optionally delete** the **.github** and **scripts folder** as it is **used for automation in the repository**.
 
-### Select **build.gradle** and click the run button at the top right corner
+### Wait for IntelliJ to import the Gradle project
 > [!TIP]
-> You can **edit how much ram** **Gradle** can use in **gradle.properties** to **speed up the process**.
+> If it **does not automatically import**, **open build.gradle** and **click the run button at the top right corner**.  
+> You also can **edit how much ram** **Gradle** can use in **gradle.properties** to **speed up the process**.
 > ```bash
 > # 8GB of ram instead of the default 6GB
 > org.gradle.jvmargs=-Xmx8G
 > ```
 
-### Click the Gradle icon on the right sidebar.
+### Click the Gradle icon on the right sidebar
 > [!IMPORTANT]
 > **Run Tasks/mcp/setup**, then **Tasks/mcp/copyAssets**.
 

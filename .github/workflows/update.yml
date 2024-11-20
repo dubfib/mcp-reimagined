@@ -5,22 +5,27 @@ on:
     branches: [ main ]
   schedule:
     - cron: '0 0 * * *'
-
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
       - uses: oven-sh/setup-bun@v2
-
       - run: |
           version=$(bun run scripts/index.ts)
           echo "version=$version" >> $GITHUB_ENV
-
+      - run: |-
+          git add .
+          git diff
+          git config --global user.email "github-action-bot@example.com"
+          git config --global user.name "GitHub Action Bot"
+          git commit -m "chore: update version" -a || echo "err: no update available"
+          git push
+        name: commit & push to repository
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           automatic_release_tag: "${{ env.version }}"
           prerelease: false
           title: "${{ env.version }}"
+        name: auto release to repository

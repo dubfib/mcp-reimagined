@@ -26,8 +26,6 @@ import gradleProperties from "./src/gradleProperties.ts";
         .replace('MAPPINGS_VERSION', `'${MAPPING_VERSION}'`)
         .replace('SPI_VERSION', `'${SPI_VERSION}'`)
 
-    console.log('finished writing to build.gradle');
-
     await fs.promises.writeFile('../build.gradle', build_gradle_fixed);
 
     const read_me = (await fs.promises.readFile('./scripts/templates/README.md')).toString();
@@ -38,5 +36,5 @@ import gradleProperties from "./src/gradleProperties.ts";
         .replace('MCP_VERSION', `${MCP_VERSION}`)
     await fs.promises.writeFile('./README.md', read_me_fixed);
 
-    console.log('finished writing to README.md');
+    console.log(`${MC_VERSION}-${MCP_VERSION}`);
 })();

@@ -11,9 +11,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: oven-sh/setup-bun@v2
-      - run: |
+      - run: |-
           version=$(bun run scripts/index.ts)
           echo "version=$version" >> $GITHUB_ENV
+        name: "run auto updater"
       - run: |-
           git add .
           git diff

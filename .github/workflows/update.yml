@@ -16,11 +16,13 @@ jobs:
 
       - run: bun run scripts/index.ts
 
-      - run: |-
-          git add .
-          git diff
-          git config --global user.email "github-action-bot@example.com"
-          git config --global user.name "GitHub Action Bot"
-          git commit -m "chore: update version" -a || echo "err: no update available"
-          git push
-        name: Commit and Push to Repository
+      - run: |
+          version=$(bun run scripts/index.ts)
+          echo "version=$version" >> $GITHUB_ENV"
+
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "${{ env.version }}"
+          prerelease: false
+          title: "${{ env.version }}"

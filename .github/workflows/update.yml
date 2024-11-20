@@ -14,11 +14,9 @@ jobs:
       - uses: actions/checkout@v4
       - uses: oven-sh/setup-bun@v2
 
-      - run: bun run scripts/index.ts
-
       - run: |
           version=$(bun run scripts/index.ts)
-          echo "version=$version" >> $GITHUB_ENV"
+          echo "version=$version" >> $GITHUB_ENV
 
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:

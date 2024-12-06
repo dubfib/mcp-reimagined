@@ -26,7 +26,7 @@ import gradleProperties from "./src/gradleProperties.ts";
         .replace('MAPPINGS_VERSION', `'${MAPPING_VERSION}'`)
         .replace('SPI_VERSION', `'${SPI_VERSION}'`)
 
-    await fs.promises.writeFile('../build.gradle', build_gradle_fixed);
+    await fs.promises.writeFile('./build.gradle', build_gradle_fixed);
 
     const read_me = (await fs.promises.readFile('./scripts/templates/README.md')).toString();
 

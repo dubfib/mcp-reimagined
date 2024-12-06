@@ -9,7 +9,7 @@
 > Press **Ctrl + Shift + Alt + S** to change your **Java version** in **IntelliJ**.
 
 > [!NOTE]
-> The **current Minecraft version** in this **repository** is **1.21.3** `20241025.112443`.
+> The **current Minecraft version** in this **repository** is **1.21.4** `20241203.143248`.
 
 ## Usage
 > [!IMPORTANT]

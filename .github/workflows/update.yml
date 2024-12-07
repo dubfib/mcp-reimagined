@@ -19,7 +19,7 @@ jobs:
           git fetch --tags
           if git tag --list | grep -q "^${version}$"; then
             echo "err: version already exists"
-            exit 0
+            exit 1
           fi
         name: "check if release exists"
       - run: |-

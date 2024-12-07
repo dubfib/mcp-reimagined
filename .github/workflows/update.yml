@@ -16,6 +16,13 @@ jobs:
           echo "version=$version" >> $GITHUB_ENV
         name: "run auto updater"
       - run: |-
+          git fetch --tags
+          if git tag --list | grep -q "^${version}$"; then
+            echo "err: version already exists"
+            exit 0
+          fi
+        name: "check if release exists"
+      - run: |-
           git fetch origin
           git pull origin main
           git add .

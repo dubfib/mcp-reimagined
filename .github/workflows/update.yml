@@ -5,6 +5,8 @@ on:
     branches: [ main ]
   schedule:
     - cron: '0 0 * * *'
+permissions:
+  actions: write
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -19,8 +21,11 @@ jobs:
           git fetch --tags
           if git tag --list | grep -q "^${version}$"; then
             echo "err: version already exists"
-            exit 1
+            gh run cancel ${{ github.run_id }}
+            gh run watch ${{ github.run_id }}
           fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         name: "check if release exists"
       - run: |-
           git fetch origin

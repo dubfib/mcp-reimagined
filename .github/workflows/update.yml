@@ -16,7 +16,7 @@ jobs:
       - run: |-
           version=$(bun run scripts/index.ts)
           echo "version=$version" >> $GITHUB_ENV
-        name: Run scripts
+        name: run scripts
       - run: |-
           git fetch --tags
           if git tag --list | grep -q "^${version}$"; then
@@ -26,7 +26,7 @@ jobs:
           fi
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        name: Release exists?
+        name: release exists?
       - run: |-
           git fetch origin
           git pull origin main
@@ -36,11 +36,11 @@ jobs:
           git config --global user.name "GitHub Action Bot"
           git commit -m "chore: update version" -a || echo "err: no update available"
           git push
-        name: Commit & Push
+        name: commit & push to repository
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           automatic_release_tag: "${{ env.version }}"
           prerelease: false
           title: "${{ env.version }}"
-        name: Create release
+        name: create release in repository

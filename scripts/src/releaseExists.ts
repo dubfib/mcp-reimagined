@@ -12,5 +12,5 @@ export default async function releaseExists(version: string): Promise<boolean> {
     if (!api.ok) throw new Error(`Failed to fetch. Status code: ${api.statusText}.`);
     const res = await api.json();
 
-    return res['name'] !== version;
+    return res['name'] === version;
 }

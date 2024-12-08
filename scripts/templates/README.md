@@ -8,11 +8,11 @@
 > This repository **requires Java** version **JAVA_VERSION** or higher.  
 > Press **Ctrl + Shift + Alt + S** to change your **Java version** in **IntelliJ**.
 
+> [!IMPORTANT]
+> You can find from Minecraft version **1.21.3** `20241025.112443` and onward in the **[releases](https://github.com/dubfib/mcp-reimagined/releases)**.
+
 > [!NOTE]
 > The current Minecraft version in this repository is **MINECRAFT_VERSION** `MCP_VERSION`.
-
-> [!IMPORTANT]
-> You can find from Minecraft version **1.21.3** `20241025.112443` and onward in the **[releases](https://github.com/dubfib/mcp-reimagined/releases)**.  
 
 ## Usage
 > [!IMPORTANT]
@@ -22,16 +22,16 @@
 ```
 $ git clone https://github.com/dubfib/mcp-reimagined.git
 ```
-*Or download from your browser **[here](https://codeload.github.com/dubfib/mcp-reimagined/zip/refs/heads/main)**.*
+*Or **download** from your **browser [here](https://codeload.github.com/dubfib/mcp-reimagined/zip/refs/heads/main)**.*
 
 ### Unzip and open the project in IntelliJ IDEA
 > [!TIP]
-> You can optionally delete the `.github` and `scripts` folder as it is used for automation in the repository.
+> You can **optionally delete** the `.github` and `scripts` folder as it is used for automation in the repository.
 
 ### Wait for IntelliJ to import the Gradle project
 > [!TIP]
 > If it **does not automatically import**, open `build.gradle` and **click the run button at the top right corner**.  
-> You also can edit how much ram Gradle can use in `gradle.properties` to **speed up the process.
+> You also can **edit how much ram Gradle can use** in `gradle.properties` to **speed up the process**.
 > ```bash
 > # 8GB of ram instead of the default 3GB
 > org.gradle.jvmargs=-Xmx8G
@@ -46,7 +46,7 @@ $ git clone https://github.com/dubfib/mcp-reimagined.git
 > Click the **dropdown next to the run button**, **select Minecraft**, and **click run**, or just run `Tasks/mcp/runClient`.
 
 ## Building
-> todo. docs will be added in the future (next commit, most likely as i already know how to do it).
+> todo. docs will be added in the future (next commit, most likely as **i already know how to do it**).
 
 ## Contributors
 * **[Hexeption](https://github.com/hexeption)**

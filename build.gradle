@@ -1,3 +1,7 @@
+import net.minecraftforge.gradle.common.util.Utils
+import net.minecraftforge.gradle.common.util.VersionJson
+import org.jetbrains.gradle.ext.*
+
 buildscript {
     repositories {
         mavenLocal()
@@ -10,10 +14,6 @@ buildscript {
         classpath "gradle.plugin.org.jetbrains.gradle.plugin.idea-ext:gradle-idea-ext:1.1.3"
     }
 }
-
-import net.minecraftforge.gradle.common.util.Utils
-import net.minecraftforge.gradle.common.util.VersionJson
-import org.jetbrains.gradle.ext.*
 
 apply plugin: 'eclipse'
 apply plugin: 'net.minecraftforge.gradle.patcher'
@@ -81,7 +81,7 @@ jar {
 
 var assetsFolder = file('run/assets')
 
-tasks.register('runclient', JavaExec) {
+tasks.register('runClient', JavaExec) {
     group = "MCP"
     description = "Runs the client"
     classpath sourceSets.main.runtimeClasspath
@@ -124,7 +124,7 @@ tasks.register('copyAssets') {
     }
 }
 
-tasks.register('runserver', JavaExec) {
+tasks.register('runServer', JavaExec) {
     mkdir 'runserver'
     group = "MCP"
     description = "Runs the server"

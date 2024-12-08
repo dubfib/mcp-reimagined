@@ -6,7 +6,7 @@ import { URLs } from "../enums/URLs.ts";
  * @returns Forge Gradle version (ex: 6) or null if not found
  * @author dubfib
 */
-export default async function forgeGradle() {
+export default async function forgeGradle(): Promise<string | null> {
     const api = await fetch(URLs.forgeGradle);
 
     if (!api.ok) throw new Error(`Failed to fetch. Status code: ${api.statusText}.`);

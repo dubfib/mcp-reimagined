@@ -1,3 +1,5 @@
+//note: if your on windows, change from: / to \\ in the paths
+
 import { URLs } from "../enums/URLs.ts";
 import downloadFile from './downloadFile.ts';
 
@@ -9,6 +11,6 @@ import downloadFile from './downloadFile.ts';
  * @author dubfib
  */
 export default async function gradleWrapper(dest: string, branch: string): Promise<void> {
-    await downloadFile(URLs.gradleWrapperJar.replace('VERSION', branch), `${dest}\\gradle-wrapper.jar`);
-    await downloadFile(URLs.gradleWrapperProperties.replace('VERSION', branch), `${dest}\\gradle-wrapper.properties`);
+    await downloadFile(URLs.gradleWrapperJar.replace('VERSION', branch), `${dest}/gradle-wrapper.jar`);
+    await downloadFile(URLs.gradleWrapperProperties.replace('VERSION', branch), `${dest}/gradle-wrapper.properties`);
 }

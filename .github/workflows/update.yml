@@ -2,42 +2,31 @@ name: Update Version
 
 on:
   push:
-    branches: [main]
+    branches: [ main ]
   schedule:
     - cron: '0 0 * * *'
-permissions:
-  actions: write
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: oven-sh/setup-bun@v2
-        name: Setup Action
-      - run: |
+      - run: |-
           version=$(bun run scripts/index.ts)
-          if [ -z "$version" ]; then
-              echo "No version logged. Skipping further steps."
-              exit 0
-          fi
           echo "version=$version" >> $GITHUB_ENV
-        name: Run Scripts
-      - if: env.version != ''
-        run: |
-          git fetch origin
-          git pull origin main
+        name: "run auto updater"
+      - run: |-
           git add .
           git diff
           git config --global user.email "github-action-bot@example.com"
           git config --global user.name "GitHub Action Bot"
           git commit -m "chore: update version" -a || echo "err: no update available"
-          git push || echo "No changes to push"
-        name: Commit & Push to Repository
-      - if: env.version != ''
-        uses: marvinpinto/action-automatic-releases@latest
+          git push
+        name: commit & push to repository
+      - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           automatic_release_tag: "${{ env.version }}"
           prerelease: false
           title: "${{ env.version }}"
-        name: Create release to Repository
+        name: auto release to repository

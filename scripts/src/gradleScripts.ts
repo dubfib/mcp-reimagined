@@ -1,3 +1,5 @@
+//note: if your on windows, change from: / to \\ in the paths
+
 import { URLs } from "../enums/URLs.ts";
 import downloadFile from './downloadFile.ts';
 
@@ -9,6 +11,6 @@ import downloadFile from './downloadFile.ts';
  * @author dubfib
  */
 export default async function gradleScripts(dest: string, branch: string): Promise<void> {
-    await downloadFile(URLs.gradlewLinux.replace('VERSION', branch), `${dest}\\gradlew`);
-    await downloadFile(URLs.gradlewWindows.replace('VERSION', branch), `${dest}\\gradlew.bat`);
+    await downloadFile(URLs.gradlewLinux.replace('VERSION', branch), `${dest}/gradlew`);
+    await downloadFile(URLs.gradlewWindows.replace('VERSION', branch), `${dest}/gradlew.bat`);
 }

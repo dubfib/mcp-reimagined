@@ -37,6 +37,8 @@ jobs:
           git commit -m "chore: update version" -a || echo "err: no update available"
           git push
         name: commit & push to repository
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"

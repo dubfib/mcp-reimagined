@@ -1,3 +1,4 @@
+//note: if your on windows, change from: / to \\ in the paths
 import path from "node:path";
 
 import latestBranch from "./src/latestBranch.ts";
@@ -18,10 +19,10 @@ import releaseExists from "./src/releaseExists.ts";
         const FORGE_GRADLE = await forgeGradle();
         const SPI_VERSION = await forgeSPI();
 
-        await gradleWrapper(path.join(root, 'gradle\\wrapper'), branch);
+        await gradleWrapper(path.join(root, 'gradle/wrapper'), branch);
         await gradleScripts(root, branch);
-
-        const build_gradle_path = path.join(root, 'scripts\\templates\\build.gradle');
+        
+        const build_gradle_path = path.join(root, 'scripts/templates/build.gradle');
         const build_gradle_template = await Bun.file(build_gradle_path).text();
 
         const build_gradle = build_gradle_template
@@ -35,7 +36,7 @@ import releaseExists from "./src/releaseExists.ts";
 
         await Bun.write(path.join(root, 'build.gradle'), build_gradle);
 
-        const readme_path = path.join(root, 'scripts\\templates\\README.md');
+        const readme_path = path.join(root, 'scripts/templates/README.md');
         const readme_template = await Bun.file(readme_path).text();
 
         const readme = readme_template

@@ -2,7 +2,7 @@ name: Update Version
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   schedule:
     - cron: '0 0 * * *'
 permissions:
@@ -13,21 +13,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: oven-sh/setup-bun@v2
-      - run: |-
+        name: Setup Action
+      - run: |
           version=$(bun run scripts/index.ts)
-          echo "version=$version" >> $GITHUB_ENV
-        name: "run auto updater"
-      - run: |-
-          git fetch --tags
-          if git tag --list | grep -q "^${version}$"; then
-            echo "err: version already exists"
-            gh run cancel ${{ github.run_id }}
-            gh run watch ${{ github.run_id }}
+          if [ -z "$version" ]; then
+              echo "No version logged. Skipping further steps."
+              exit 0
           fi
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        name: "check if release exists"
-      - run: |-
+          echo "version=$version" >> $GITHUB_ENV
+        name: Run Scripts
+      - if: env.version != ''
+        run: |
           git fetch origin
           git pull origin main
           git add .
@@ -35,12 +31,13 @@ jobs:
           git config --global user.email "github-action-bot@example.com"
           git config --global user.name "GitHub Action Bot"
           git commit -m "chore: update version" -a || echo "err: no update available"
-          git push
-        name: commit & push to repository
-      - uses: "marvinpinto/action-automatic-releases@latest"
+          git push || echo "No changes to push"
+        name: Commit & Push to Repository
+      - if: env.version != ''
+        uses: marvinpinto/action-automatic-releases@latest
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           automatic_release_tag: "${{ env.version }}"
           prerelease: false
           title: "${{ env.version }}"
-        name: auto release to repository
+        name: Create release to Repository

@@ -34,7 +34,7 @@ group = 'me.yourname'
 version = '1.0.0'
 
 ext {
-    minecraft_version = '1.21.4'
+    minecraft_version = ''
     mcp_version = '20241203.143248'
     mappings_channel = 'official'
     mappings_version = '1.21.4'

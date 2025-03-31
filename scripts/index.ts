@@ -16,7 +16,7 @@ import releaseExists from "./src/releaseExists.ts";
     const branch = await latestBranch();
     const { JAVA_VERSION, MC_VERSION, MCP_VERSION, MAPPING_CHANNEL, MAPPING_VERSION } = await gradleProperties(branch);
 
-    if (await releaseExists(`${MC_VERSION}-${MCP_VERSION}`)) {
+    //if (await releaseExists(`${MC_VERSION}-${MCP_VERSION}`)) {
         const FORGE_GRADLE = await forgeGradle();
         const SPI_VERSION = await forgeSPI();
 
@@ -48,5 +48,5 @@ import releaseExists from "./src/releaseExists.ts";
         await Bun.write(path.join(root, 'README.md'), readme);
 
         console.log(`${MC_VERSION}-${MCP_VERSION}`);
-    }
+    //}
 })();

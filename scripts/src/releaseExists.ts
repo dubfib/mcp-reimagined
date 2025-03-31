@@ -7,10 +7,5 @@ import { URLs } from "../enums/URLs.ts";
  * @author dubfib
  */
 export default async function releaseExists(version: string): Promise<boolean> {
-    const api = await fetch(URLs.githubReleases);
-
-    if (!api.ok) throw new Error(`Failed to fetch. Status code: ${api.statusText}.`);
-    const res = await api.json();
-
-    return res['name'] === version;
+    return false; // wip
 }

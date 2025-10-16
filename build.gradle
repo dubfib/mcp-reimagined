@@ -10,7 +10,7 @@ buildscript {
         gradlePluginPortal()
     }
     dependencies {
-        classpath 'net.minecraftforge.gradle:ForgeGradle:6.0+'
+        classpath 'net.minecraftforge.gradle:ForgeGradle:7.0+'
         classpath "gradle.plugin.org.jetbrains.gradle.plugin.idea-ext:gradle-idea-ext:1.1.3"
     }
 }

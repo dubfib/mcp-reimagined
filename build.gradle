@@ -38,7 +38,7 @@ ext {
     mcp_version = '20251209.095502'
     mappings_channel = 'official'
     mappings_version = '1.21.11'
-    spi_version = '7.1.5'
+    spi_version = '8.0.0'
 }
 
 repositories {

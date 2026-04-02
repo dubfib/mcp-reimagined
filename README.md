@@ -12,7 +12,7 @@
 > You can find from Minecraft version **1.21.3** `20241025.112443` and onward in the **[releases](https://github.com/dubfib/mcp-reimagined/releases)**.
 
 > [!NOTE]
-> The current Minecraft version in this repository is **26.1** `20260326.105027`.
+> The current Minecraft version in this repository is **26.1.1** `20260401.101545`.
 
 ## Usage
 > [!IMPORTANT]

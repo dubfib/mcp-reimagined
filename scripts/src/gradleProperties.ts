@@ -3,7 +3,8 @@ import latestBranch from "./latestBranch.ts";
 
 /**
  * broken: needs to be replaced by minecraft.versions.toml
- 
+ * also requires new formatting, will be fixed in a PR alongside code cleanup
+ *
  * Fetches and parses gradle.properties file in Forge repository (Latest Version)
  * @throws Error When fetch fails
  * @param branch Branch to download from MinecraftForge/MinecraftForge on GitHub

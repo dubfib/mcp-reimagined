@@ -16,6 +16,7 @@ jobs:
           echo "version=$version" >> $GITHUB_ENV
         name: "run auto updater"
       - run: |-
+          git pull
           git add .
           git diff
           git config --global user.email "github-action-bot@example.com"

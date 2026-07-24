@@ -23,7 +23,7 @@ println(' Java: ' + System.getProperty('java.version') +
         ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ')' +
         ' Arch: ' + System.getProperty('os.arch'))
 
-java.toolchain.languageVersion = JavaLanguageVersion.of(undefined)
+java.toolchain.languageVersion = JavaLanguageVersion.of(25)
 
 configurations {
     shade
@@ -34,10 +34,10 @@ group = 'me.yourname'
 version = '1.0.0'
 
 ext {
-    minecraft_version = 'undefined'
-    mcp_version = 'undefined'
-    mappings_channel = 'undefined'
-    mappings_version = 'undefined'
+    minecraft_version = '26.1.2'
+    mcp_version = '20260409.101008'
+    mappings_channel = 'official'
+    mappings_version = '26.1.2'
     spi_version = '8.0.0'
 }
 

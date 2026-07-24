@@ -36,7 +36,7 @@ version = '1.0.0'
 ext {
     minecraft_version = 'MINECRAFT_VERSION'
     mcp_version = 'MCP_VERSION'
-    mappings_channel = 'official'
+    mappings_channel = 'MAPPINGS_CHANNEL'
     mappings_version = 'MAPPINGS_VERSION'
     spi_version = 'SPI_VERSION'
 }

@@ -4,9 +4,6 @@ build/
 # Source code
 src/*
 
-# Scripts
-scripts/*
-
 # Run files
 runclient
 

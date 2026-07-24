@@ -3,7 +3,7 @@ export enum URLs {
     forgeGradle = "https://api.github.com/repos/MinecraftForge/ForgeGradle",
     gradleWrapperJar = "https://github.com/MinecraftForge/MinecraftForge/raw/refs/heads/VERSION/gradle/wrapper/gradle-wrapper.jar",
     gradleWrapperProperties = "https://raw.githubusercontent.com/MinecraftForge/MinecraftForge/refs/heads/VERSION/gradle/wrapper/gradle-wrapper.properties",
-    minecraftVersions = "https://raw.githubusercontent.com/MinecraftForge/MinecraftForge/refs/heads/VERSION/minecraft.versions.toml",
+    gradleProperties = "https://raw.githubusercontent.com/MinecraftForge/MinecraftForge/refs/heads/VERSION/gradle.properties",
     forgeSPI = "https://files.minecraftforge.net/net/minecraftforge/forgespi/index.html",
     gradlewLinux = "https://raw.githubusercontent.com/MinecraftForge/MinecraftForge/refs/heads/VERSION/gradlew",
     gradlewWindows = "https://raw.githubusercontent.com/MinecraftForge/MinecraftForge/refs/heads/VERSION/gradlew.bat",

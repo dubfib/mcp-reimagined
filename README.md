@@ -1,3 +1,10 @@
+# NOTICE
+> I cannot ethically maintain this project further since it heavily relies on Minecraft Forge. There has been well-documented mistreatment from Forge's lead developer, LexManos, towards his own team, and even other developers. See [NeoForge's article](https://neoforged.net/news/theproject) for more.
+
+> In addition, MCP, which this relies on, and other tooling is pretty much now legacy compared to modern day NeoForge equivalents. If this were to ever be remade: it should definitely use NeoForge.
+
+> This repository will remain archived permanently. Feel free to fork if you wish.
+
 # mcp-reimagined
 > Automated fork of **[Hexeption/MCP-Reborn](https://github.com/Hexeption/MCP-Reborn)** powered by **GitHub Actions** and **Bun** which updates to the latest version of **Minecraft**.
 
